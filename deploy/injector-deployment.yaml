@@ -17,6 +17,8 @@ spec:
       labels:
         app.kubernetes.io/name: vault-injector
         app.kubernetes.io/instance: vault
+      annotations:
+        security.banzaicloud.io/mutate: skip
     spec:
       serviceAccountName: "vault-injector"
       containers:
